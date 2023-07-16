@@ -5,6 +5,7 @@ export enum SelectedPage {
     ContactUs = "contactus",
   }
   
+  // typescript interface
   export interface BenefitType {
     icon: JSX.Element;
     title: string;
