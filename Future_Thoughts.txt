@@ -4,3 +4,4 @@
 - Footer links and contact info
 - "Learn More" does something different than 'Join Now' button
 - Sponsor links work
+- Make mobile menu collapse after making selection
