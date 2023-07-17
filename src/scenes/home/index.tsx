@@ -18,7 +18,7 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");	// breakpoint = 1060px
-
+  
   // Much of the css formatting here is to deal with page responsiveness
   // between desktop screens and mobile screens
   // "Use flex and grid as much as you can, without having to resort to
@@ -72,9 +72,10 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
 						{/* rest of text */}
             <p className="mt-8 text-sm">
-              Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
+              {/* Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
-              Body Now.
+              Body Now. */}
+              
             </p>
           </motion.div>
 

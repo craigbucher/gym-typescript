@@ -1,0 +1,5 @@
+- email randomization key to .env file?
+✔ form reset button
+- Footer links and contact info
+- "Learn More" does something different than 'Join Now' button
+- Sponsor links work

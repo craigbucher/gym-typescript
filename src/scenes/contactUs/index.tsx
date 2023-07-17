@@ -19,6 +19,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
   const {
     register,
+    reset,
     trigger,  // allows us to validate our form
     formState: { errors },  // destructure 'errors' from form state
   } = useForm();
@@ -27,6 +28,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   // async, because 'trigger' is an async function
   const onSubmit = async (e: any) => {
     const isValid = await trigger();  // trigger comes from useForm
+    reset();  // reset form values
     if (!isValid) {
       e.preventDefault(); // don't refresh the page or go to new page (to show errors)
     }
@@ -81,9 +83,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <form
               target="_blank" // when someone hits 'submit', we don't go to a new page
               onSubmit={onSubmit}
-              // action="https://formsubmit.com/your@email.com"
+              // action="https://formsubmit.co/your@email.com"
               // formsubmit will then send 'anonymizer' to replace actual address:
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+              // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+              action="https://formsubmit.co/aff02af91ea6642cf77d02b2d63ad9db"
               method="POST"
             >
               <input
@@ -147,6 +150,14 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               >
                 SUBMIT
               </button>
+              <button
+                type="reset"
+                className="ml-5 mt-5 rounded-lg bg-primary-500 px-20 py-3 transition duration-500 hover:text-white"
+                onClick={() => reset()}
+                // value="RESET"
+                >
+                RESET
+                </button>
             </form>
           </motion.div>
 

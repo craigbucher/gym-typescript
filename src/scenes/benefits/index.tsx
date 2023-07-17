@@ -23,7 +23,7 @@ const benefits: Array<BenefitType> = [
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    title: "100s of Diverse Classes",
     description:
       "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
   },
