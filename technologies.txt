@@ -31,3 +31,4 @@ vs file path imports ***
 
 *** page size breakpoints are defined in tailwind.config.js
 
+Vite .env: https://vitejs.dev/guide/env-and-mode.html

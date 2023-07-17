@@ -28,7 +28,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   // async, because 'trigger' is an async function
   const onSubmit = async (e: any) => {
     const isValid = await trigger();  // trigger comes from useForm
-    reset();  // reset form values
+    // reset();  // reset form values
     if (!isValid) {
       e.preventDefault(); // don't refresh the page or go to new page (to show errors)
     }
@@ -85,8 +85,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               onSubmit={onSubmit}
               // action="https://formsubmit.co/your@email.com"
               // formsubmit will then send 'anonymizer' to replace actual address:
-              // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-              action="https://formsubmit.co/aff02af91ea6642cf77d02b2d63ad9db"
+              // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"  //original/Ed's
+              // action="https://formsubmit.co/aff02af91ea6642cf77d02b2d63ad9db"  //mine
+              action={import.meta.env.VITE_FORM}
               method="POST"
             >
               <input
