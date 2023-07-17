@@ -6,12 +6,14 @@
 - heroicons = icons by tailwind
 - cloudflare = hosting
 - anchor link smooth scroll = click on takes an anchor element and scrolls the page to it 
+- react hook form = provides a set of hooks that you can use to manage the state of your forms, including validation, submission, and error handling
 
 npm create vite@latest
 npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
 npm i -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 npm i -D prettier prettier-plugin-tailwindcss
+npm i react-hook-form
 
 dev dependencies (not included in production build):
 npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
@@ -25,4 +27,6 @@ npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
 
 *** Review beginning of video where he discusses changing sytntax to '@' imports
 vs file path imports ***
+
+*** page size breakpoints are defined in tailwind.config.js
 

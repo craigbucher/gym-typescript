@@ -1,17 +1,17 @@
 // from: https://www.youtube.com/watch?v=I2NNxr3WPDo
 // https://github.com/ed-roh/gym-typescript
 
-// assumes index.tsx file in navbar directory
+// assumes index.tsx file in each 'scenes' directory
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
-// import OurClasses from "@/scenes/ourClasses";
+import OurClasses from "./scenes/ourClasses";
 import Benefits from "@/scenes/benefits";
-// import ContactUs from "@/scenes/contactUs";
-// import Footer from "@/scenes/footer";
+import ContactUs from "@/scenes/contactUs";
+import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 
-// typescript is capitalized:
+// typescript variables are capitalized:
 // enums persist into runtime code (most typescript does not)
 // **** moved to shared/types.ts ****
 // enum SelectedPage {
@@ -55,6 +55,9 @@ function App() {
       {/* so that we can navigate to different parts of the page */}
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
+      <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   )
 }
