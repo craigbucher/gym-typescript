@@ -19,18 +19,22 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
   const {
     register,
-    trigger,
-    formState: { errors },
+    trigger,  // allows us to validate our form
+    formState: { errors },  // destructure 'errors' from form state
   } = useForm();
 
+  // using 'any' type because we can't be sure what 'e'/error type will be:
+  // async, because 'trigger' is an async function
   const onSubmit = async (e: any) => {
-    const isValid = await trigger();
+    const isValid = await trigger();  // trigger comes from useForm
     if (!isValid) {
-      e.preventDefault();
+      e.preventDefault(); // don't refresh the page or go to new page (to show errors)
     }
   };
 
   return (
+    // 'section id ="contactus" = used by anchor link smooth scroll
+    // mx-auto w-5/6 = use 5/6th of page width, centered
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div
 			// Make 'Contact Us' in navbar a different color:
@@ -59,6 +63,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
         </motion.div>
 
         {/* FORM AND IMAGE */}
+        {/* justify between = equal space between items */}
+        {/* md:flex = use flex on medium screens and larger */}
         <div className="mt-10 justify-between gap-8 md:flex">
           {/* form enters from bottom and moves up: */}
 					<motion.div
@@ -73,8 +79,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             }}
           >
             <form
-              target="_blank"
+              target="_blank" // when someone hits 'submit', we don't go to a new page
               onSubmit={onSubmit}
+              // action="https://formsubmit.com/your@email.com"
+              // formsubmit will then send 'anonymizer' to replace actual address:
               action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
               method="POST"
             >
@@ -82,16 +90,17 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 className={inputStyles}	// defined, above
                 type="text"
                 placeholder="NAME"
-                {...register("name", {
+                {...register("name", {  // react-hook-form is 'registering' input, by passing in "name"
                   required: true,
                   maxLength: 100,
                 })}
               />
+              {/* Error conditions: */}
               {errors.name && (
                 <p className="mt-1 text-primary-500">
-                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "required" && "This field is required"}
                   {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
+                    "Max length is 100 char"}
                 </p>
               )}
 
@@ -107,11 +116,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               {errors.email && (
                 <p className="mt-1 text-primary-500">
                   {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
+                    "This field is required"}
+                    {/* checks against regex pattern: */}
+                  {errors.email.type === "pattern" && "Invalid email address"}
                 </p>
               )}
-
+              {/* 'textarea' instead of 'input' = allows multiple rows: */}
               <textarea
                 className={inputStyles}
                 placeholder="MESSAGE"
@@ -125,9 +135,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               {errors.message && (
                 <p className="mt-1 text-primary-500">
                   {errors.message.type === "required" &&
-                    "This field is required."}
+                    "This field is required"}
                   {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
+                    "Max length is 2000 characters"}
                 </p>
               )}
 
@@ -142,7 +152,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
 					{/* image enters from bottom and moves up */}
           <motion.div
-						// relative = positon: relative; parent for child before:, below
+						// relative = positon: relative; parent for child before: element, below
 						// basis-2/5 = use 2/5 of container width
 						// md:mt-0 = 0 top margin on screens medium and larger
             className="relative mt-16 basis-2/5 md:mt-0"

@@ -7,6 +7,7 @@
 - cloudflare = hosting
 - anchor link smooth scroll = click on takes an anchor element and scrolls the page to it 
 - react hook form = provides a set of hooks that you can use to manage the state of your forms, including validation, submission, and error handling
+    -- good for use with Tailwind, since uses basic html tags
 
 npm create vite@latest
 npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
