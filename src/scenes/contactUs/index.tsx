@@ -86,8 +86,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               // action="https://formsubmit.co/your@email.com"
               // formsubmit will then send 'anonymizer' to replace actual address:
               // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"  //original/Ed's
-              // action="https://formsubmit.co/aff02af91ea6642cf77d02b2d63ad9db"  //mine
-              action={import.meta.env.VITE_FORM}
+              action={import.meta.env.VITE_FORM}  // actual info in .env
               method="POST"
             >
               <input
