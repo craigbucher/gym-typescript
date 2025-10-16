@@ -1,0 +1,36 @@
+- react = framework
+- typescript = language
+- vite = 'starter pack'
+- framer motion = animations
+- tailwind css = styling
+- heroicons = icons by tailwind
+- cloudflare = hosting
+- anchor link smooth scroll = click on takes an anchor element and scrolls the page to it 
+- react hook form = provides a set of hooks that you can use to manage the state of your forms, including validation, submission, and error handling
+    -- good for use with Tailwind, since uses basic html tags
+
+npm create vite@latest
+npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
+npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm i -D prettier prettier-plugin-tailwindcss
+npm i react-hook-form
+
+dev dependencies (not included in production build):
+npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
+
+* VSCode extensions:    ES7+ React/Redux/React-Native snippets
+                        Tailwind Documentation (ctrl-alt-t)
+                        Tailwind CSS IntelliSense
+
+'type' vs 'interface': https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFJRRUp2YV9oV3VLTGN5NjQ1aW45dHoxM2tlUXxBQ3Jtc0tsbG84RHhncUpacm9XYUdYTXVNcDNFT3BkN3l5ZVJGTEFTbXRvODRlcVpMSUlHMDhqbjBLNHhwQlp6dXQ5dS1ZNEpuOTV4S2RVdzNSRzNka3RtaF95WlJ6aXQtQU45blU0M0JlSUpFVUdWeUNYY3NISQ&q=https%3A%2F%2Ftinyurl.com%2Ftypescripttypesvsinterfaces&v=I2NNxr3WPDo
+"I see it as more opinion-based"
+
+*** Review beginning of video where he discusses changing sytntax to '@' imports
+vs file path imports ***
+
+*** page size breakpoints are defined in tailwind.config.js
+
+Vite .env: https://vitejs.dev/guide/env-and-mode.html
+
+deployed site: https://57951056.gym-typescript-an1.pages.dev/ https://6363966c.gym-typescript-an1.pages.dev/
