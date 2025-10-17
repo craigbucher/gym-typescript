@@ -35,3 +35,8 @@ vs file path imports ***
 Vite .env: https://vitejs.dev/guide/env-and-mode.html
 
 deployed site: https://57951056.gym-typescript-an1.pages.dev/ https://6363966c.gym-typescript-an1.pages.dev/
+## 🤝 Contributing
+Motivation
+Quick Start
+Usage
+Contributing
